@@ -9,6 +9,7 @@ module.exports = {
     manifestOptions: {
       background_color: '#38b6f1', // background_color
       start_url: '/?launcher=true', // start_url, 웹으로 접속한건지, pwa로 접속한건지 구분할 수 있다.
+      display: 'standalone', // browser(위에 url이 보임), standalone(일반적인 앱과 같은 화면), fullscreen(아래에 뒤로 가기, 홈 버튼도 안보인)
     },
   },
 };
