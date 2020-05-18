@@ -1,8 +1,10 @@
 <template>
   <div id="app">
+    <h1>botw recipe</h1>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/foods">Food</router-link> |
+      <router-link to="/materials">Material</router-link> |
+      <router-link to="/cook">Cook</router-link>
     </div>
     <router-view/>
   </div>
@@ -24,9 +26,11 @@
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  padding: 0 0.5em;
 }
 
 #nav a.router-link-exact-active {
   color: #42b983;
+  font-size: 1.3em;
 }
 </style>
