@@ -73,7 +73,7 @@ export default class Foods extends Vue {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
   }
 </style>

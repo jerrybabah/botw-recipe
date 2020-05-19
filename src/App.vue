@@ -11,6 +11,16 @@
 </template>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f6f4;
+  margin: 0;
+  height: 100%;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -66,5 +76,15 @@
   .container {
     width: 1200px;
   }
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper .image {
+  background-color: rgba(0,0,0,0.6);
+  border: .1rem solid rgba(169,157,11,0.95);
 }
 </style>

@@ -29,16 +29,19 @@ export default class Food extends Vue {
 
   .food .image-wrapper {
     margin-top: 30px;
-    display: flex;
-    justify-content: center;
   }
 
   .food .name {
     margin: 0 auto;
+    margin-top: 16px;
   }
 
   .food .name:hover, .food .image-wrapper .image {
     text-decoration: underline;
     cursor: pointer;
+  }
+
+  .food .image-wrapper .image {
+    width: 120px;
   }
 </style>
