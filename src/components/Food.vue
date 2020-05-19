@@ -1,15 +1,17 @@
 <template>
-  <li>
-    <div class="food-wraaper">
-      <img :src="food.img" alt="이미지">
-      <div class="name">{{ food.name }}</div>
+  <li :data-index="food.id">
+    <div class="food">
+      <div class="image-wrapper">
+        <img class="image" :src="food.image" alt="이미지">
+      </div>
+      <div class="name">{{ food.name_kr }}</div>
     </div>
   </li>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import IFood from '../interfaces/food';
+import IFood from '../interfaces/food.interface';
 
 @Component
 export default class Food extends Vue {
@@ -18,5 +20,25 @@ export default class Food extends Vue {
 </script>
 
 <style>
+  .food {
+    min-width: 200px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+  }
 
+  .food .image-wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .food .name {
+    margin: 0 auto;
+  }
+
+  .food .name:hover, .food .image-wrapper .image {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 </style>

@@ -2,7 +2,8 @@
   "updated": 1589865671979,
   "data": [
     {
-      "name": "Copious Meat Skewer",
+      "name_en": "Copious Meat Skewer",
+      "name_kr": "고기 꼬치구이 곱빼기",
       "image": "/img/foods/copious_meat_skewer.png",
       "materials": [
         [
@@ -195,8 +196,9 @@
       "id": 1
     },
     {
-      "name": "Copious Mushroom Skewer",
-      "image": "/img/foods/copious_mushroom_shewer.png",
+      "name_en": "Copious Mushroom Skewer",
+      "name_kr": "버섯구이 곱빼기",
+      "image": "/img/foods/copious_mushroom_skewer.png",
       "materials": [
         [
           {
@@ -556,7 +558,8 @@
       "id": 2
     },
     {
-      "name": "Copious Fish Skewer",
+      "name_en": "Copious Fish Skewer",
+      "name_kr": "생선 꼬치구이 곱빼기",
       "image": "/img/foods/copious_fish_skewer.png",
       "materials": [
         [
@@ -945,7 +948,8 @@
       "id": 3
     },
     {
-      "name": "Fish and Mushroom Skewer",
+      "name_en": "Fish and Mushroom Skewer",
+      "name_kr": "생선 꼬치구이와 버섯",
       "image": "/img/foods/fish_and_mushroom_skewer.png",
       "materials": [
         [
@@ -1140,7 +1144,8 @@
       "id": 4
     },
     {
-      "name": "Fish Skewer",
+      "name_en": "Fish Skewer",
+      "name_kr": "생선 꼬치구이",
       "image": "/img/foods/fish_skewer.png",
       "materials": [
         [
@@ -1247,7 +1252,8 @@
       "id": 5
     },
     {
-      "name": "Gourmet Spiced Meat Skewer",
+      "name_en": "Gourmet Spiced Meat Skewer",
+      "name_kr": "특급 짐승 스테이크",
       "image": "/img/foods/gourmet_spiced_meat_skewer.png",
       "materials": [
         [
@@ -1257,13 +1263,6 @@
             "name_en": "Raw Gourmet Meat",
             "name_jp": "極上ケモノ肉",
             "image": "/img/materials/raw_gourmet_meat.png"
-          },
-          {
-            "id": 6,
-            "name_kr": "특급 새 고기",
-            "name_en": "Raw Whole Bird",
-            "name_jp": "極上トリ肉",
-            "image": "/img/materials/raw_whole_bird.png"
           }
         ],
         [
@@ -1280,8 +1279,8 @@
       "maxHeartsRestored": 24,
       "minSellingPrice": 70,
       "maxSellingPrice": 410,
-      "note_en": "Raw Gourmet Meat/Raw Whole Bird + Goron spice",
-      "note_kr": "짐승 또는 새의 특급 고기와 고론 향신료",
+      "note_en": "Raw Gourmet Meat + Goron spice",
+      "note_kr": "특급 짐승 고기와 고론 향신료",
       "footNotes": [
         "4 Raw Gourmet Meats",
         "Same as max possible hearts"
@@ -1289,7 +1288,8 @@
       "id": 6
     },
     {
-      "name": "Meat Skewer",
+      "name_en": "Meat Skewer",
+      "name_kr": "고기 꼬치구이",
       "image": "/img/foods/meat_skewer.png",
       "materials": [
         [
@@ -1353,7 +1353,8 @@
       "id": 7
     },
     {
-      "name": "Meat and Mushroom Skewer",
+      "name_en": "Meat and Mushroom Skewer",
+      "name_kr": "고기 꼬치구와 버섯",
       "image": "/img/foods/meat_and_mushroom_skewer.png",
       "materials": [
         [
@@ -1500,7 +1501,8 @@
       "id": 8
     },
     {
-      "name": "Mushroom Skewer",
+      "name_en": "Mushroom Skewer",
+      "name_kr": "버섯 꼬치구이",
       "image": "/img/foods/mushroom_skewer.png",
       "materials": [
         [
@@ -1602,7 +1604,8 @@
       "id": 9
     },
     {
-      "name": "Prime Spiced Meat Skewer",
+      "name_en": "Prime Spiced Meat Skewer",
+      "name_kr": "상급 짐승 스테이크",
       "image": "/img/foods/prime_spiced_meat_skewer.png",
       "materials": [
         [
@@ -1612,13 +1615,6 @@
             "name_en": "Raw Prime Meat",
             "name_jp": "上ケモノ肉",
             "image": "/img/materials/raw_prime_meat.png"
-          },
-          {
-            "id": 5,
-            "name_kr": "상급 새 고기",
-            "name_en": "Raw Bird Thigh",
-            "name_jp": "上トリ肉",
-            "image": "/img/materials/raw_bird_thigh.png"
           }
         ],
         [
@@ -1635,8 +1631,8 @@
       "maxHeartsRestored": 12,
       "minSellingPrice": 40,
       "maxSellingPrice": 180,
-      "note_en": "Raw Prime Meat/Raw Bird Thigh + Goron Spice",
-      "note_kr": "짐승 또는 새의 상급 고기와 고론 향신료",
+      "note_en": "Raw Prime Meat + Goron Spice",
+      "note_kr": "상급 짐승 고기와 고론 향신료",
       "footNotes": [
         "4 Raw Prime Meats",
         "Same as max possible hearts",

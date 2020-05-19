@@ -33,4 +33,38 @@
   color: #42b983;
   font-size: 1.3em;
 }
+
+.container {
+  margin: 0 auto;
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    width: 500px;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 800px;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 </style>
