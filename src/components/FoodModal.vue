@@ -134,7 +134,8 @@ export default class FoodModal extends Vue {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px;
+    width: 45%;
+    min-width: 290px;
     margin-top: 30px;
     margin-bottom: 80px;
   }
