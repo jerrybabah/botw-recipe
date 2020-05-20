@@ -36,7 +36,6 @@
             <div class="value">
               <div class="material-list-wrapper"
               v-for="(materialList, index) in food.materials" :key="index">
-                <!-- TODO: 다음 중 하나 멘트를 넣을 지 결정 -->
                 <div class="comment">{{index + 1}}.{{materialList.length > 1? '다음 중 하나': ''}}</div>
                 <div class="material-list">
                   <div class="material" v-for="material in materialList" :key="material.id">
@@ -57,18 +56,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop } from 'vue-property-decorator';
+import Modal from './Modal';
 import IFood from '../interfaces/food.interface';
 
 @Component
-export default class FoodModal extends Vue {
+export default class FoodModal extends Modal {
   @Prop() private food!: IFood | null;
 
   @Prop() private isHidden!: boolean;
-
-  protected emitHiding() {
-    this.$emit('hide');
-  }
 }
 </script>
 
@@ -150,7 +146,7 @@ export default class FoodModal extends Vue {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     margin-bottom: 10px;
     border-top: 3px solid black;
   }
@@ -158,7 +154,7 @@ export default class FoodModal extends Vue {
   .content .info>.materials {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     width: 100%;
     border-top: 3px solid black;
     padding: 0 10px;
@@ -176,7 +172,7 @@ export default class FoodModal extends Vue {
   .materials .value .material-list-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     border-top: 1px solid black;
   }
 
