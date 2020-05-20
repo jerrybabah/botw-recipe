@@ -2,13 +2,38 @@
 module.exports = {
   // 빌드 후 만들어지는 manifest.json에 영향을 준다.
   pwa: {
+    workboxPluginMode: 'GenerateSW', // default, another option: InjectManifest
+    workboxOptions: {
+      // Do not precache images
+      // TODO: 나머지는 프리캐시가 되는건가? 그리고 프리캐시 되는 애들은 캐싱전략이 어떻게 되는거지?
+      exclude: [/\.(?:png|jpg|jpeg|svg)$/],
+      // Define runtime caching rules.
+      runtimeCaching: [{
+        // Match any request that ends with .png, .jpg, .jpeg or .svg.
+        urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
+
+        // Apply a cache-first strategy.
+        // TODO: 캐싱전략에 대해서 좀 더 공부하고 다시 정해보자.
+        handler: 'CacheFirst',
+
+        options: {
+          // Use a custom cache name.
+          cacheName: 'images',
+
+          // Only cache 10 images.
+          // expiration: {
+          //   maxEntries: 10,
+          // },
+        },
+      }],
+    },
     name: 'botw receipe normal', // name, 앱 설치 후 바탕화면에 보이는 이름으로 쓰인다.
     shortName: 'botw receipe short', // short_name
     // themeColor: '#695c30', // theme_color
-    themeColor: '#38b6f1', // 데스크탑 앱에서 top toolbar에 적용된다.
+    themeColor: '#f7f6f4', // 데스크탑 앱에서 top toolbar에 적용된다.
     manifestOptions: {
       background_color: '#38b6f1', // background_color
-      start_url: '/?launcher=true', // start_url, 웹으로 접속한건지, pwa로 접속한건지 구분할 수 있다.
+      start_url: '/', // start_url, 웹으로 접속한건지, pwa로 접속한건지 구분할 수 있다.
       display: 'standalone', // browser(위에 url이 보임), standalone(일반적인 앱과 같은 화면), fullscreen(아래에 뒤로 가기, 홈 버튼도 안보인)
     },
   },
