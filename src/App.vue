@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h1>botw recipe</h1>
+    <install-button/>
     <div id="nav">
       <router-link to="/foods">Food</router-link> |
       <router-link to="/materials">Material</router-link> |
@@ -9,6 +10,17 @@
     <router-view/>
   </div>
 </template>
+
+<script lang="ts">
+import InstallButton from './components/InstallButton.vue';
+
+export default {
+  name: 'App',
+  components: {
+    InstallButton,
+  },
+};
+</script>
 
 <style>
 * {
