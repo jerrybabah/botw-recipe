@@ -63,8 +63,6 @@ import IFood from '../interfaces/food.interface';
 @Component
 export default class FoodModal extends Modal {
   @Prop() private food!: IFood | null;
-
-  @Prop() private isHidden!: boolean;
 }
 </script>
 
