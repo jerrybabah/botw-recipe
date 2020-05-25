@@ -1,5 +1,8 @@
 # botw-recipe
 
+## Demo
+[link](https://botw-recipe.web.app/)
+
 ## Project setup
 ```
 yarn install
