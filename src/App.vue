@@ -12,14 +12,19 @@
 </template>
 
 <script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
 import InstallButton from './components/InstallButton.vue';
 
-export default {
-  name: 'App',
+@Component({
   components: {
     InstallButton,
   },
-};
+})
+export default class App extends Vue {
+  private created() {
+    this.$store.dispatch('getAllFoods');
+  }
+}
 </script>
 
 <style>

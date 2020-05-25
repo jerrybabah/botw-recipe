@@ -9,12 +9,12 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import foodData from '../data/foods.data';
-import IFood from '../interfaces/food.interface';
+import { mapState } from 'vuex';
 
 import Food from '../components/Food.vue';
 import FoodModal from '../components/FoodModal.vue';
 
+import IFood from '../interfaces/food.interface';
 import { isClickableElement, getIdFromClickableElement } from '../utils/helper';
 
 
@@ -23,14 +23,19 @@ import { isClickableElement, getIdFromClickableElement } from '../utils/helper';
     Food,
     FoodModal,
   },
+  computed: {
+    ...mapState([
+      'foods',
+      'focusedFood',
+    ]),
+  },
 })
 export default class Foods extends Vue {
-  // @Prop() private foods!: Array<IFood>;
-  private foods: IFood[] = foodData.data;
+  private foods!: IFood[];
 
   private isModalHidden = true;
 
-  private focusedFood: IFood | null = null;
+  private focusedFood!: IFood | null;
 
   // event delegation: 이벤트 위임
   // 리스트의 요소마다 이벤트를 등록한다면 요소가 많아질 수록 쓸데없이 메모리 누수가 생긴다.
@@ -41,8 +46,7 @@ export default class Foods extends Vue {
     if (e.target && isClickableElement(target)) {
       this.isModalHidden = false;
 
-      this.focusedFood = this.foods
-        .find((food) => food.id === getIdFromClickableElement(target)) || null;
+      this.$store.commit('setFocusedFood', getIdFromClickableElement(target));
     }
 
     // input 엘리먼트에 대한 key 이벤트는 vue 자체적으로 api를 제공하지만

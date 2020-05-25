@@ -5,7 +5,8 @@ module.exports = {
     workboxPluginMode: 'GenerateSW', // default, another option: InjectManifest
     workboxOptions: {
       // Do not precache images
-      // TODO: 나머지는 프리캐시가 되는건가? 그리고 프리캐시 되는 애들은 캐싱전략이 어떻게 되는거지?
+      // TODO: 나머지는 프리캐시가 되는건가? 그리고 프리캐시 되는 애들은 캐싱전략이 어떻게 되는거지? => 프리캐시만의 로직이 있다. revision 같은. 좀 더 알아볼 필요가 있다.
+      // precach, runtime caching이 비교할 게 아닌가? addRoute, registerRoute의 차이와 연관이 있어보이는데...
       exclude: [/\.(?:png|jpg|jpeg|svg)$/],
       // Define runtime caching rules.
       runtimeCaching: [{
@@ -13,7 +14,6 @@ module.exports = {
         urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
 
         // Apply a cache-first strategy.
-        // TODO: 캐싱전략에 대해서 좀 더 공부하고 다시 정해보자.
         handler: 'CacheFirst',
 
         options: {

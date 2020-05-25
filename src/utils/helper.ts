@@ -32,3 +32,5 @@ export function getIdFromClickableElement(target: Element) {
 export function preventEslintError() {
   return '';
 }
+
+export const timer = (time: number) => new Promise((resolve) => setTimeout(() => resolve(), time));
