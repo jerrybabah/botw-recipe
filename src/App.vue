@@ -2,6 +2,7 @@
   <div id="app">
     <h1>botw recipe</h1>
     <install-button/>
+    <!-- <display-mode-toggle/> -->
     <div id="nav">
       <router-link to="/foods">Food</router-link> |
       <router-link to="/materials">Material</router-link> |
@@ -14,15 +15,18 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import InstallButton from './components/InstallButton.vue';
+import DisplayModeToggle from './components/DisplayModeToggle.vue';
 
 @Component({
   components: {
     InstallButton,
+    DisplayModeToggle,
   },
 })
 export default class App extends Vue {
   private created() {
     this.$store.dispatch('getAllFoods');
+    this.$store.commit('initDisplayMode');
   }
 }
 </script>
@@ -44,6 +48,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  position: relative;
 }
 
 #nav {
@@ -103,5 +108,17 @@ body {
 .image-wrapper .image {
   background-color: rgba(0,0,0,0.6);
   border: .1rem solid rgba(169,157,11,0.95);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #2d2d2d;
+  }
+  h1, .name, .key, .value, .comment, .exit {
+    color: white;
+  }
+  #nav a {
+    color: #dddddd;
+  }
 }
 </style>

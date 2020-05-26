@@ -88,13 +88,19 @@ export default class FoodModal extends Modal {
 
   .modal-wrapper {
     position: relative;
-    background-color: white;
+    background-color: #f7f6f4;
     z-index: 2;
     min-width: 300px;
     min-height: 400px;
     width: 80%;
     height: 80%;
     overflow: scroll;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .modal-wrapper {
+      background-color: #2d2d2d;
+    }
   }
 
   .modal-wrapper .exit {

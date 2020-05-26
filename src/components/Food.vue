@@ -19,7 +19,7 @@ export default class Food extends Vue {
 }
 </script>
 
-<style>
+<style scoped>
   .food {
     min-width: 200px;
     min-height: 200px;
