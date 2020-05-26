@@ -1,6 +1,6 @@
 <template>
   <!-- TODO: 꾸미기 -->
-  <button v-if="deferredPrompt" @click="promptInstall">
+  <button class="install" v-if="deferredPrompt" @click="promptInstall">
     설치하기
   </button>
 </template>
@@ -46,5 +46,7 @@ export default class InstallButton extends Vue {
 </script>
 
 <style>
-
+button.install {
+  cursor: pointer;
+}
 </style>
