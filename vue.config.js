@@ -1,5 +1,8 @@
 /*eslint-disable */
 module.exports = {
+  css: {
+    sourceMap: true,
+  },
   // 빌드 후 만들어지는 manifest.json에 영향을 준다.
   pwa: {
     workboxPluginMode: 'GenerateSW', // default, another option: InjectManifest
